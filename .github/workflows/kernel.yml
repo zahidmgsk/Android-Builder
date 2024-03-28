@@ -260,7 +260,7 @@ jobs:
           # Add configuration
           for config in $(cat ${{ env.ADD_DEFCONFIG }})
           do
-            echo $i >> ${{ env.DEFCONFIG }}
+            echo $config >> ${{ env.DEFCONFIG }}
           done
 
           # Apply patch
@@ -288,8 +288,8 @@ jobs:
             sed -i "$row3 i\        if (cft->ss && (cgrp->root->flags & CGRP_ROOT_NOPREFIX) && !(cft->flags & CFTYPE_NO_PREFIX)) {" kernel/cgroup/cgroup.c
             echo "🎖️ Modify kernel/cgroup/cgroup.c"
           fi
-          if [ -f android-kernel/net/netfilter/xt_qtaguid.c ]; then
-            git am -s < ${{ env.WORKSPACE }}/LXC/Patches/xt_qtaguid.patch
+          if [ -f net/netfilter/xt_qtaguid.c ]; then
+            patch -p1 < ${{ env.WORKSPACE }}/Kernel/LXC/Patches/xt_qtaguid.patch
             echo "🎖️ Apply xt_qtaguid.patch"
           fi
 
