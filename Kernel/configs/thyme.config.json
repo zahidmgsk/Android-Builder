@@ -1,11 +1,11 @@
 [
   {
     "kernelSource": {
-      "name": "Xiaomi10S（Utsav）",
-      "repo": "https://github.com/UtsavBalar1231/kernel_xiaomi_sm8250",
-      "branch": "android13-stable",
-      "device": "thyme",
-      "defconfig": "thyme_defconfig"
+      "name": "Pixel 4a 5G（Bramble）",
+      "repo": "https://github.com/LineageOS/android_kernel_google_redbull",
+      "branch": "lineage-21",
+      "device": "bramble",
+      "defconfig": "redbull_defconfig"
     },
     "enableCcache": true,
     "toolchains": [
