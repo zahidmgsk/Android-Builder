@@ -1,7 +1,7 @@
 [
   {
     "kernelSource": {
-      "name": "Pixel 4a 5G（Bramble）",
+      "name": "Pixel4a5G（Bramble）",
       "repo": "https://github.com/LineageOS/android_kernel_google_redbull",
       "branch": "lineage-21",
       "device": "bramble",
